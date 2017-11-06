@@ -15,6 +15,7 @@ def description():
     8.14 实现自定义容器 基本不会出现
     8.15 代理对象
     8.16 定义多个构造器
+    8.17 创建不初始化的对象 cls.__new__(cls)
 
     """
     pass
@@ -108,6 +109,15 @@ class IStream(metaclass=ABCMeta):
 
 class AA(Iterable):
     def __iter__(self):
+        pass
+
+
+class C(object):
+
+    @classmethod
+    def __new__(cls, *args, **kwargs):
+        # cls() 会初始化示例
+        # cls.__new__(cls) 不初始化
         pass
 
 
