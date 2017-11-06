@@ -14,7 +14,19 @@ class Room:
 
 @total_ordering
 class House:
-    def __init__(self, name, style):
-        self.name = name
-        self.style = style
+    def __init__(self, age):
+        self.age = age
+        self.name = None
+        self.style = None
         self.rooms = list()
+
+    def __eq__(self, other):
+        return self.age == other.age
+
+    def __le__(self, other):
+        return self.age < other.age
+
+
+a = House(age=10)
+b = House(age=30)
+print(a != b)
