@@ -20,6 +20,7 @@ def description():
     8.18 扩展其他类的功能 ：功能准备 扩展类选择
     8.17 创建不初始化的对象 cls.__new__(cls)
     8.18 类混入 Mixins 非继承
+    8.25 创建缓存实例 希望相同参数的实例是单例
 
     """
     pass
@@ -116,7 +117,6 @@ class AA(Iterable):
         pass
 
 
-<<<<<<< HEAD
 class Date(object):
     def __init__(self, year, month, day):
         self.year = year
@@ -134,8 +134,9 @@ class LoggedMappingMixin(object):
     __slots__ = ()
 
     pass
-class C(object):
 
+
+class C(object):
     @classmethod
     def __new__(cls, *args, **kwargs):
         # cls() 会初始化示例
