@@ -16,6 +16,7 @@ def description():
     8.15 代理对象
     8.16 定义多个构造器
     8.17 创建不初始化的对象 cls.__new__(cls)
+    8.18 类混入 Mixins 非继承
 
     """
     pass
