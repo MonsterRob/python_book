@@ -18,6 +18,8 @@ def description():
     8.16 定义多个构造器
     8.17 创建不用调用__init__()的实例
     8.18 扩展其他类的功能 ：功能准备 扩展类选择
+    8.17 创建不初始化的对象 cls.__new__(cls)
+    8.18 类混入 Mixins 非继承
 
     """
     pass
@@ -114,6 +116,7 @@ class AA(Iterable):
         pass
 
 
+<<<<<<< HEAD
 class Date(object):
     def __init__(self, year, month, day):
         self.year = year
@@ -131,6 +134,13 @@ class LoggedMappingMixin(object):
     __slots__ = ()
 
     pass
+class C(object):
+
+    @classmethod
+    def __new__(cls, *args, **kwargs):
+        # cls() 会初始化示例
+        # cls.__new__(cls) 不初始化
+        pass
 
 
 if __name__ == '__main__':
