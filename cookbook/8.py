@@ -1,6 +1,7 @@
 # encoding=utf-8
 from abc import ABCMeta, abstractmethod
 from collections import Iterable
+import time
 
 
 def description():
@@ -15,6 +16,8 @@ def description():
     8.14 实现自定义容器 基本不会出现
     8.15 代理对象
     8.16 定义多个构造器
+    8.17 创建不用调用__init__()的实例
+    8.18 扩展其他类的功能 ：功能准备 扩展类选择
 
     """
     pass
@@ -111,6 +114,24 @@ class AA(Iterable):
         pass
 
 
+class Date(object):
+    def __init__(self, year, month, day):
+        self.year = year
+        self.month = month
+        self.day = day
+        print('init')
+
+    @classmethod
+    def today(cls):
+        t = time.localtime()
+        return cls(t.tm_year, t.tm_mon, t.tm_mday)  # 会调用init方法
+
+
+class LoggedMappingMixin(object):
+    __slots__ = ()
+
+    pass
+
+
 if __name__ == '__main__':
-    s = Stock('xxx', 10)
-    print(s.name)
+    b = Date.today()
