@@ -1,5 +1,6 @@
-# -*- coding: utf-8 -*-
+# encoding=utf-8
 # 将装饰器定义为类
+
 from functools import wraps
 import types
 
