@@ -4,6 +4,7 @@
 
 class Spam:
     def __init__(self, name):
+        print('normal class')
         self.name = name
 
 
@@ -19,11 +20,15 @@ class NoSpam(metaclass=NoInstance):
 
 
 class Singleton(type):
+    # 初始化类
     def __init__(cls, *args, **kwargs):
+        print('go here1')
         cls.__instance = None
         super().__init__(*args, **kwargs)
 
+    # 调用类
     def __call__(cls, *args, **kwargs):
+        print('go here2')
         if cls.__instance is None:
             cls.__instance = super().__call__(*args, **kwargs)
             return cls.__instance
@@ -32,11 +37,10 @@ class Singleton(type):
 
 
 class MySingleton(metaclass=Singleton):
+    # 初始化实例
     def __init__(self, name):
+        print('go here3')
         self.name = name
 
 
-a = MySingleton('xxx')
-b = MySingleton('zzz')
 
-print(a is b, a.name, b.name)
