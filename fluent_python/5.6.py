@@ -1,8 +1,13 @@
 # encoding=utf-8
 
 
-def f(name=10):
-    print(name)
+class A:
+    print('adasd')
+    if 1:
+        print('asdasd')
+    # 类定义时执行
 
-
-print(f.__defaults__)
+def myf():
+    print('asda111')
+    if 1:
+        print('asdasda1111')
