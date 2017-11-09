@@ -20,3 +20,6 @@ class A:
 def f():
     name = 10
     print(name)
+
+
+
