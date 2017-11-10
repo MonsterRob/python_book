@@ -32,8 +32,15 @@ class MyCard:
     def __setattr__(self, key, value):
         print(key, value)
 
+    def __subclasscheck__(self, subclass):
+        pass
+
+
+def func(a: int, b: int) -> int:
+    return a + b
+
+
 
 c = MyCard()
 
 print(c.name)
-
