@@ -40,7 +40,11 @@ def func(a: int, b: int) -> int:
     return a + b
 
 
+class A:
+    pass
+
 
 c = MyCard()
 
 print(c.name)
+print(MyCard.__class__)
