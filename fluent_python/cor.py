@@ -32,6 +32,26 @@ def get_avg():
         average = total / count
 
 
-my_cor = simple_gen(10)
-x = next(my_cor)
-print(x)
+def e():
+    yield from 'AB'
+    yield from {1, 2, 3}
+
+
+def f():
+    def a():
+        for b in range(3):
+            yield b
+
+    def g():
+        for x in range(10):
+            yield from a()
+
+    def h():
+        yield 'ABCD'
+
+    yield from a()
+    yield from g()
+    yield from h()
+
+
+print(list(f()))
