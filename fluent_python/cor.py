@@ -1,5 +1,7 @@
 # encoding=utf-8
 from inspect import getgeneratorstate
+import time
+import sys
 from functools import wraps
 
 
@@ -49,9 +51,17 @@ def f():
     def h():
         yield 'ABCD'
 
-    yield from a()
     yield from g()
     yield from h()
 
 
-print(list(f()))
+def p():
+    print('start')
+    for number in range(100):
+        print('xxxx', number, end=' ')
+        time.sleep(1.0)
+    print('end')
+
+
+if __name__ == '__main__':
+    pass
