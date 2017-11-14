@@ -60,11 +60,17 @@ def quantity(storage_name):
 
 
 class C(object):
-    price = quantity('price')
-
     def __init__(self, price):
         self.price = price
 
 
-c = C(price=10)
+class D(object):
+    name = 'xxx'
 
+    def __getattr__(self, item):
+        print(item, 'dddd')
+        print('go here')
+
+
+d = D()
+print(d.name)
