@@ -1,7 +1,10 @@
 # encoding=utf-8
+from collections import namedtuple
 
 
 class Item:
+    print('import doing the job item')
+
     def __init__(self, description, price, weigth):
         self.desciption = description
         self.price = price
@@ -23,6 +26,8 @@ class Item:
 
 
 class A(object):
+    print('import doing the job A')
+
     def __init__(self, price, weight):
         self.price = price
         self.weigth = weight
@@ -72,5 +77,6 @@ class D(object):
         print('go here')
 
 
-d = D()
-print(d.name)
+Cat = namedtuple('Cat', 'name age')
+c = Cat('wali', 'eva')
+print(c)
