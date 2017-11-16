@@ -269,5 +269,8 @@
    实例对象
    Python 社区
    https://www.youtube.com/watch?v=x-kB2o8sd5c
+   给哪个程序发送指令
+   发送什么指令
+   指令参数有哪些
    
  
