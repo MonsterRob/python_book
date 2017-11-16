@@ -1,0 +1,7 @@
+关于断点调试：
+    基于以下事实：线程的指令是线性执行的
+    指令：
+    step over: step to the next line in this file
+    step into: step to the next line excuted
+    step into My Code:step to the next line excuted ignoring libraries
+    step out
