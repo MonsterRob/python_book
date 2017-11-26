@@ -1,5 +1,11 @@
 # -*- coding: utf-8 -*-
-from . import my_b
-
+import time
+import sys
+import os
 if __name__ == '__main__':
-    my_b.say()
+    print(os.path.basename('my_b.py'))
+
+
+
+
+
