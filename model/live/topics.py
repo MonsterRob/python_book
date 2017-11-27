@@ -1,5 +1,9 @@
 # -*- coding: utf-8 -*-
 
-import os
+class A:
+    def __del__(self):
+        print('gone')
 
-BASE = os.path.dirname(os.path.dirname(os.path.dirname(__file__)))
+
+a = A()
+print('ddd')

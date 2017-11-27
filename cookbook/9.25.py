@@ -1,6 +1,7 @@
 # encoding=utf-8
 # 拆解字解码
 import dis
+from collections import Iterable
 
 
 def count_down(n):
@@ -11,5 +12,8 @@ def count_down(n):
         print('blast_off')
 
 
-print(count_down.__code__.co_code)
-print(dis.dis(count_down))
+def plain_list(ls):
+    rl = []
+    for x in ls:
+        if not isinstance(x, Iterable):
+            pass
