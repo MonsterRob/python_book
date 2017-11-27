@@ -1,25 +1,9 @@
 # -*- coding: utf-8 -*-
-
-name = 10
-
-print('defi outer name')
+import inspect
 
 
-# 导入时运行
-
-class A:
-    print('defi name')
-    name = 20
-
-    # 导入时运行
-    def say(self):
-        # 调用时运行
-        self.name = 10
+def fxu():
+    return inspect.stack()[1]
 
 
-def f():
-    name = 10
-    print(name)
-
-
-
+print(fxu())
