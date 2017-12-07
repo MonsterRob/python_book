@@ -289,7 +289,17 @@ POSIX IPC 介绍
     锁请求
     只运行一个实例的程序
 SOCKET
-
+    通信信道
+    字节流
+    对等==远程
+    本地
+    关键系统调用：
+    socket bind listen accept connect
+    listen 开启监听
+    acccept 接受连接请求
+    未决连接的数量
+    accept 会创建新的socket 正是此socket与对等socket通信
+    监听socket
 
 
 
