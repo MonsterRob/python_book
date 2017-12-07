@@ -300,6 +300,9 @@ SOCKET
     未决连接的数量
     accept 会创建新的socket 正是此socket与对等socket通信
     监听socket
+    边界 连接 可靠
+UNIX SOCKET
+    同一主机 SOCKET通信
 
 
 
