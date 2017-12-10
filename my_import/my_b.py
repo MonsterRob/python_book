@@ -1,6 +1,10 @@
 # -*- coding: utf-8 -*-
-print('xxx')
+import struct
 
+if __name__ == '__main__':
+    num = 0x1234567
+    var = struct.pack('i', num)
+    print(var)
 
-def say():
-    print('say b')
+    print(hex(var[0]))
+
