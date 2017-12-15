@@ -1,0 +1,14 @@
+系统管理
+    系统安全：
+        syslog 系统日志
+        openSSL 安全套接字密码库
+        lastb 用户错误登陆 系统登录异常使用
+        sudo 切换身份执行命令 预设身份时root
+        logrotate
+        chroot 更改根目录路径
+        logsave
+        last
+
+
+
+
